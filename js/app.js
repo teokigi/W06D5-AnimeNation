@@ -1,9 +1,9 @@
 // MVP
-// Create a form in HTML with inputs for relevant data
-// When the form is submitted, access the data from the form in the form’s submit event object
-// Create a list in HTML
-// Append the submitted data to the list
-// Add a “Delete All” <button> which clears all of the list items from the list
+// Create a form in HTML with inputs for relevant data - done
+// When the form is submitted, access the data from the form in the form’s submit event object - done
+// Create a list in HTML - to do
+// Append the submitted data to the list - to do
+// Add a “Delete All” <button> which clears all of the list items from the list - done
 // Note: If you are at all unclear about the process of reading and writing to the DOM, complete the MVP, writing all the code in one function. Understanding the document’s methods is the main learning for this homework. Abstracting code into helper functions is secondary.
 //
 // Extensions
@@ -17,7 +17,18 @@ document.addEventListener('DOMContentLoaded', () => {
     //function that handles the form submittion
     const form = document.querySelector('#form');
     form.addEventListener('submit', formHandler);
+
+    const deleteBtn = document.querySelector('#deleteAllBtn');
+    deleteBtn.addEventListener('click', deleteEverything);
 });
+
+const deleteEverything = function(event){
+
+    const  getDivBox = document.querySelector("#createdListings");
+
+    getDivBox.innerHTML = '';
+    
+}
 
 const formHandler = function(event){
     event.preventDefault();
