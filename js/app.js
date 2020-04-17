@@ -11,3 +11,43 @@
 // Experiment with adding a new form input and experimenting with a new <input> type eg. Add a radio button input
 // Style your application with CSS
 // Add any other extension functionality that you want!
+document.addEventListener('DOMContentLoaded', () => {
+    //logging to console javascript loaded
+    console.log('JavaScript has loaded');
+    //function that handles the form submittion
+    const form = document.querySelector('#form');
+    form.addEventListener('submit', formHandler);
+});
+
+const formHandler = function(event){
+    event.preventDefault();
+        console.log(event);
+
+        const getDivBox = document.querySelector("#createdListings");
+
+        const newItemBox = document.createElement("div");
+        newItemBox.classList.add("createdItem");
+
+        const newItemTitle = document.createElement("p");
+        newItemTitle.textContent = `${event.target.title.value}`;
+
+        const newItemRelease = document.createElement("p");
+        newItemRelease.textContent = `Released on ${event.target.releaseDate.value}`;
+
+        const newItemOpening = document.createElement("iframe");
+        newItemOpening.classList.add("songBox");
+        convertLink = `${event.target.openingTheme.value}`;
+        //https://www.youtube.com/watch?v=z-wpXShTUfY
+        convertLink = convertLink.split("watch?v=");
+
+        convertLink = convertLink[0].concat("embed/",convertLink[1]);
+        console.log(convertLink);
+        newItemOpening.src = `${convertLink}`;
+
+        newItemBox.appendChild(newItemTitle);
+        newItemBox.appendChild(newItemOpening);
+        newItemBox.appendChild(newItemRelease);
+        getDivBox.appendChild(newItemBox);
+
+        event.target.reset();
+}
