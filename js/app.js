@@ -40,10 +40,14 @@ const formHandler = function(event){
         newItemBox.classList.add("createdItem");
 
         const newItemTitle = document.createElement("p");
+        newItemTitle.classList.add("itemTitle")
         newItemTitle.textContent = `${event.target.title.value}`;
 
-        const newItemRelease = document.createElement("p");
-        newItemRelease.textContent = `Released on ${event.target.releaseDate.value}`;
+        const newUnorderedList = document.createElement("ul");
+
+        const newListItem = document.createElement("li");
+        newListItem.textContent = `Released on ${event.target.releaseDate.value}`;
+        newUnorderedList.appendChild(newListItem);
 
         const newItemOpening = document.createElement("iframe");
         newItemOpening.classList.add("songBox");
@@ -57,7 +61,8 @@ const formHandler = function(event){
 
         newItemBox.appendChild(newItemTitle);
         newItemBox.appendChild(newItemOpening);
-        newItemBox.appendChild(newItemRelease);
+        newItemBox.appendChild(newUnorderedList);
+        
         getDivBox.appendChild(newItemBox);
 
         event.target.reset();

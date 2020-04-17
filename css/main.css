@@ -82,7 +82,9 @@ body {
     background-color:blue;
     color:black;
 }
-
+.itemTitle{
+    font-family:Georgia;
+}
 .songBox{
     height:240;
     width:320;
