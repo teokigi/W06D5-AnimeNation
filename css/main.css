@@ -5,19 +5,20 @@ body {
     background-repeat:no-repeat;
     background-size:100% 1024px;
     color:white;
-    box-shadow: inset 0px 0px 20px white;
     padding: 20px;
 }
 
 .topPane{
-    border:1;
     border-style:solid;
     border-radius:25px;
-    box-shadow: 2px 2px 4px black, 0 0 25px red, 0 0 5px darkred;
+    box-shadow: inset 0px 0px 60px red;
     width:95%;
-    height:100px;
-    text-align:center;
+    height:140px;
     display:inline-block;
+    justify-content:center;
+    font-family:impact;
+    font-style:italic;
+    font-size:26px;
 }
 
 .topPane:hover{
@@ -26,8 +27,11 @@ body {
 
 .middleTopPane{
     width:80%;
+    height:190px;
     display:inline-block;
     margin:20px;
+    text-shadow: 0 0 10px blue;
+    font-family:georgia;
 }
 
 .middleBottomPane{
@@ -37,12 +41,12 @@ body {
     margin:20px;
     border-style:solid;
     border-radius:80px;
+    box-shadow: inset 0px 0px 30px white;
 }
 #pageTitle{
   color: white;
-  text-shadow: 2px 2px 6px black, 0 0 50px red, 0 0 5px darkred;
-  font-size:xxx-large;
-}
+  text-shadow: 2px 1px 2px blue, 8px 4px 3px darkred, 20px 10px 10px red;
+  }
 
 #form{
     margin:5px;
@@ -53,7 +57,7 @@ body {
     border-radius:10px;
     width:200;
     display:inline-block;
-    box-shadow: 2px 2px 4px black, 0 0 25px blue, 0 0 5px darkblue;
+    box-shadow: 2px 2px 4px black, 0px 0px 25px blue, 0px 0px 5px darkblue;
 }
 
 #form:hover{
@@ -76,16 +80,27 @@ body {
 .createdItem{
     margin:5px;
     display:inline-block;
-    border-style:solid;
+    border-style:dotted;
     border-radius:10px;
     justify-content:center;
-    background-color:blue;
+    font-family:impact;
+    box-shadow: inset 0px 0px 40px blue;
+    background-color:white;
     color:black;
 }
+.createdItem:hover{
+    border-style:solid;
+}
 .itemTitle{
-    font-family:Georgia;
+    font-family:georgia;
+    font-size:20px;
+    text-shadow: 0px 0px 3px purple;
 }
 .songBox{
     height:240;
     width:320;
+}
+#listingsTitle{
+    text-shadow: 1px 1px 1px darkblue, 3px 3px 10px red;
+    font-family:'comic sans ms';
 }

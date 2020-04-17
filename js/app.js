@@ -39,7 +39,7 @@ const formHandler = function(event){
         const newItemBox = document.createElement("div");
         newItemBox.classList.add("createdItem");
 
-        const newItemTitle = document.createElement("p");
+        const newItemTitle = document.createElement("h3");
         newItemTitle.classList.add("itemTitle")
         newItemTitle.textContent = `${event.target.title.value}`;
 
@@ -52,7 +52,6 @@ const formHandler = function(event){
         const newItemOpening = document.createElement("iframe");
         newItemOpening.classList.add("songBox");
         convertLink = `${event.target.openingTheme.value}`;
-        //https://www.youtube.com/watch?v=z-wpXShTUfY
         convertLink = convertLink.split("watch?v=");
 
         convertLink = convertLink[0].concat("embed/",convertLink[1]);
