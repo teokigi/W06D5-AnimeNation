@@ -6,6 +6,13 @@ body {
     background-size:100% 1024px;
     color:white;
     padding: 20px;
+    transform: rotateX(0deg);
+    animation-name:intoView;
+    animation-duration:1s;
+}
+@keyframes intoView{
+    from {transform:rotateX(90deg);}
+    to {transform:rotateX(0deg);}
 }
 
 .topPane{
@@ -19,8 +26,16 @@ body {
     font-family:impact;
     font-style:italic;
     font-size:26px;
+    word-spacing:30px;
+    animation-name: example;
+    animation-duration:20s;
+    animation-iteration-count: infinite;
 }
-
+@keyframes example {
+    0% {box-shadow: inset 0px 0px 60px red;}
+    50% {box-shadow: inset 0px 0px 60px blue;}
+    100% {box-shadow: inset 0px 0px 60px red;}
+  }
 .topPane:hover{
     border-style:dotted;
 }
@@ -30,7 +45,7 @@ body {
     height:190px;
     display:inline-block;
     margin:20px;
-    text-shadow: 0 0 10px blue;
+    text-shadow: inset 0px 0px 10px blue;
     font-family:georgia;
 }
 
@@ -39,6 +54,7 @@ body {
     display:inline-block;
     justify-content:center;
     margin:20px;
+    padding:20px;
     border-style:solid;
     border-radius:80px;
     box-shadow: inset 0px 0px 30px white;
@@ -46,8 +62,11 @@ body {
 #pageTitle{
   color: white;
   text-shadow: 2px 1px 2px blue, 8px 4px 3px darkred, 20px 10px 10px red;
+  transition:text-transform 20s;
   }
-
+#pageTitle:hover{
+    text-transform: uppercase;
+}
 #form{
     margin:5px;
     padding:5px;
@@ -80,16 +99,21 @@ body {
 .createdItem{
     margin:5px;
     display:inline-block;
-    border-style:dotted;
     border-radius:10px;
     justify-content:center;
     font-family:impact;
-    box-shadow: inset 0px 0px 40px blue;
+    box-shadow: 20px 10px 3px black, inset 0px 0px 40px rgb(208, 255, 0);
+    
     background-color:white;
     color:black;
+    transform: rotateY(0deg);
+    animation-name: itemSpin;
+    animation-duration:8s;
 }
-.createdItem:hover{
-    border-style:solid;
+
+@keyframes itemSpin{
+    from {transform: rotateY(90deg);}
+    to {transform: rotateY(-360deg);}
 }
 .itemTitle{
     font-family:georgia;
