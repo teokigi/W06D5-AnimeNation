@@ -26,7 +26,7 @@ body {
     font-family:impact;
     font-style:italic;
     font-size:26px;
-    word-spacing:30px;
+    word-spacing:100px;
     animation-name: example;
     animation-duration:20s;
     animation-iteration-count: infinite;
@@ -42,10 +42,9 @@ body {
 
 .middleTopPane{
     width:80%;
-    height:190px;
+    height:250px;
     display:inline-block;
-    margin:20px;
-    text-shadow: inset 0px 0px 10px blue;
+    text-shadow: 1px 1px 3px red;
     font-family:georgia;
 }
 
@@ -68,15 +67,13 @@ body {
     text-transform: uppercase;
 }
 #form{
-    margin:5px;
+    width:220px;
+    height:200px;
     padding:5px;
-    border:1;
     border-style:solid;
-    border-width:1px;
-    border-radius:10px;
-    width:200;
+    border-radius:20px;
     display:inline-block;
-    box-shadow: 2px 2px 4px black, 0px 0px 25px blue, 0px 0px 5px darkblue;
+    box-shadow: 2px 2px 4px black, 0px 0px 25px blue, 0px 0px 5px darkblue, inset 0px 0px 20px black;
 }
 
 #form:hover{
